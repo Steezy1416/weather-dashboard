@@ -25,6 +25,14 @@ header {
 
 }
 
+#search-button {
+    display: block;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 50%;
+}
+
 #city-info-container {
     display: flex;
     flex-direction: column;
