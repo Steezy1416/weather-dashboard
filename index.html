@@ -30,25 +30,28 @@
 
         <!--main city data start-->
         <section id="city-info-container">
-            <h3 id="city-name">Houston</h3>
-            <p class="date">09/20/2022</p>
+            <h3 id="city-name"></h3>
+            <p id="current-date"></p>
+            <div id="image-container">
+                
+            </div>
             <div id="weather-conditions" class="container">
                 <div class="row main-conditions text-center">
                     <div class="col-12 gy-3">
-                        <div id="temp">
-                            <p>Temp:</p>
+                        <div>
+                            <p id="current-temp"></p>
                         </div>
                     </div>
 
                     <div class="col-12 gy-3">
-                        <div id="wind">
-                            <p>Wind:</p>
+                        <div>
+                            <p id="current-wind"></p>
                         </div>
                     </div>
 
                     <div class="col-12 gy-3">
-                        <div id="humidity">
-                            <p>Humidity:</p>
+                        <div>
+                            <p id="current-humidity"></p>
                         </div>
                     </div>
                 </div>
@@ -118,6 +121,7 @@
         <!--forecast data end-->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./script.js"></script>
 </body>
