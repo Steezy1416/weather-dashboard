@@ -26,7 +26,7 @@ var getRepoData = function (cityName) {
         if (response.ok) {
             response.json().then(function (data) {
                 displayCurrentData(data)
-                console.log(data)
+                displayForecast(data)
             })
         }
         else {
@@ -65,4 +65,12 @@ var displayCurrentData = function(data) {
     $(currentHumidity).empty().append(humidity)
     
 }
+
+var displayForecast = function(data) {
+    console.log(data)
+    for(var i = 5; i < data.list.lenght;i+=8) {
+        console.log("This is list" + i)
+    }
+}
+
 $(cityForm).on("submit", getInfo)
