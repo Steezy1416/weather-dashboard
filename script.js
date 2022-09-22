@@ -4,11 +4,10 @@ var cityInput = $("#city-input")
 var historyContainer = $(".history-container")
 var numberOfHistoryBoxes = -1
 var clearStorage = $("#clear-btn")
-
-var placeholder = $(".placeholder-form-container")
-placeholder.classList.add("hide")
+var formContainer = $(".placeholder-form-container")
 var mainInformation =$(".main-information")
 
+//id="form-container"
 
 var getInfo = function (event) {
     event.preventDefault()
@@ -33,7 +32,6 @@ var getRepoData = function (cityName) {
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-                
                 displayCurrentData(data)
                 
                 console.log(data)
@@ -50,7 +48,7 @@ var getRepoData = function (cityName) {
 }
 
 var displayCurrentData = function (data) {
-    
+    formContainer.removeClass("placeholder-form-container")
     mainInformation.removeClass("hide")
     
 
