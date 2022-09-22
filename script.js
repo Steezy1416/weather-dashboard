@@ -102,8 +102,9 @@ var displayForecast = function (data) {
 var cityHistory = function(city) {
     var historyRow = $(".history-row")
     var historyBox = document.createElement("div")
-    historyBox.classList = "col-auto col-3 history-box gy-3"
+    historyBox.classList = "col-3 history-box"
     var historyBoxName = document.createElement("p")
+    historyBoxName.className = "city-history"
     historyBoxName.textContent = city
     historyBox.append(historyBoxName)
     historyRow.append(historyBox)

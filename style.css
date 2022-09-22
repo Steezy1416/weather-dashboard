@@ -70,10 +70,19 @@ header {
 }
 
 .history-box {
-    border: 2px solid white;
+    border: 2px solid red;
     border-radius: 25px;
     background-color: white;
     margin: 5px;
+    text-align: center;
+}
+.history-box:hover {
+    border: 5px;
+}
+
+.city-history {
+    margin: 0;
+    font-size: 30px;
 }
 
 
