@@ -27,6 +27,7 @@ var getRepoData = function (cityName) {
             response.json().then(function (data) {
                 displayCurrentData(data)
                 displayForecast(data)
+                console.log(data)
             })
         }
         else {
@@ -34,12 +35,12 @@ var getRepoData = function (cityName) {
             return
         }
     })
-    .catch(function(error){
-        console.log(error)
-    })
+        .catch(function (error) {
+            console.log(error)
+        })
 }
 
-var displayCurrentData = function(data) {
+var displayCurrentData = function (data) {
     var currentCity = $("#city-name")
     var currentDate = $("#current-date")
     var currentTemp = $("#current-temp")
@@ -63,13 +64,35 @@ var displayCurrentData = function(data) {
     $(currentTemp).empty().append(temp)
     $(currentWind).empty().append(wind)
     $(currentHumidity).empty().append(humidity)
-    
+
 }
 
-var displayForecast = function(data) {
-    console.log(data)
-    for(var i = 5; i < data.list.lenght;i+=8) {
-        console.log("This is list" + i)
+var displayForecast = function (data) {
+    var dayIncrement = 1
+    for (var i = 5; i < data.list.length; i += 8) {
+
+        var date = moment(moment()).add(dayIncrement, 'days').format('l')
+        var weathericon = data.list[i].weather[0].icon
+        var imageFor = document.querySelector("#image-container-for-" + i)
+        var imgIcon = document.createElement("img")
+        imgIcon.src = "http://openweathermap.org/img/wn/" + weathericon + ".png"
+
+        dayIncrement++
+        var temp = "Temp: " + data.list[i].main.temp + "°F"
+        var wind = "Wind: " + data.list[i].wind.speed + " Mph"
+        var humidity = "Humidity: " + data.list[i].main.humidity + "%"
+
+        var dateFor = $("#date-for-" + i)
+        var tempFor = $("#temp-for-" + i)
+        var windFor = $("#wind-for-" + i)
+        var humidityFor = $("#humidity-for-" + i)
+
+        $(dateFor).empty().append(date)
+        $(imageFor).empty().append(imgIcon)
+        $(tempFor).empty().append(temp)
+        $(windFor).empty().append(wind)
+        $(humidityFor).empty().append(humidity)
+
     }
 }
 
