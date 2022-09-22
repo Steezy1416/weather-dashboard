@@ -26,7 +26,7 @@ var getRepoData = function (cityName) {
         if (response.ok) {
             response.json().then(function (data) {
                 displayCurrentData(data)
-                displayForecast(data)
+                
                 console.log(data)
             })
         }
@@ -65,6 +65,9 @@ var displayCurrentData = function (data) {
     $(currentWind).empty().append(wind)
     $(currentHumidity).empty().append(humidity)
 
+    displayForecast(data)
+    cityHistory(city)
+
 }
 
 var displayForecast = function (data) {
@@ -94,6 +97,19 @@ var displayForecast = function (data) {
         $(humidityFor).empty().append(humidity)
 
     }
+}
+
+var cityHistory = function(city) {
+    var historyRow = $(".history-row")
+    var historyBox = document.createElement("div")
+    historyBox.classList = "col-auto col-3 history-box gy-3"
+    var historyBoxName = document.createElement("p")
+    historyBoxName.textContent = city
+    historyBox.append(historyBoxName)
+    historyRow.append(historyBox)
+    
+
+    
 }
 
 $(cityForm).on("submit", getInfo)
