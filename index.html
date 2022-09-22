@@ -18,115 +18,133 @@
     </header>
 
     <div id="container">
-        <!--search for city container start-->
-        <section id="form-container">
+        <!--placeholder search for city container start-->
+        <section class="placeholder-form-container" id="form-container">
             <h2>Search City</h2>
             <form id="search-city-form">
                 <input type="text" placeholder="Enter City Name Here" id="city-input">
                 <button type="submit" id="search-button">Search</button>
             </form>
         </section>
-        <!--search for city container end-->
+        <!--placeholder search for city container end-->
 
-        <!--main city data start-->
-        <section id="city-info-container">
-            <h3 id="city-name"></h3>
-            <p id="current-date"></p>
-            <div id="image-container">
+        <div class="main-information hide">
 
-            </div>
-            <div id="weather-conditions" class="container">
-                <div class="row main-conditions text-center">
-                    <div class="col-12 gy-3">
-                        <div>
-                            <p id="current-temp"></p>
+            <!--search for city container start-->
+            <section id="form-container">
+                <h2>Search City</h2>
+                <form id="search-city-form">
+                    <input type="text" placeholder="Enter City Name Here" id="city-input">
+                    <button type="submit" id="search-button">Search</button>
+                </form>
+            </section>
+            <!--search for city container end-->
+
+            <!--main city data start-->
+            <section id="city-info-container">
+
+                <h3 id="city-name"></h3>
+                <p id="current-date"></p>
+                <div id="image-container">
+
+
+                </div>
+                <div id="weather-conditions" class="container">
+                    <div class="row main-conditions text-center">
+                        <div class="col-12 gy-3">
+                            <div>
+                                <p id="current-temp"></p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-12 gy-3">
-                        <div>
-                            <p id="current-wind"></p>
+                        <div class="col-12 gy-3">
+                            <div>
+                                <p id="current-wind"></p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-12 gy-3">
-                        <div>
-                            <p id="current-humidity"></p>
+                        <div class="col-12 gy-3">
+                            <div>
+                                <p id="current-humidity"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </section>
-        <!--main city data end-->
+            </section>
+            <!--main city data end-->
 
-        <!--forecast data start-->
-        <section id="forecast">
-            <div class="container">
-                <div class="row text-center justify-content-center">
-                    <div class="col-12 col-md-6 col-lg-2 gy-3">
-                        <div class="card">
-                            <div class="card-header" id="date-for-5">
-                                
-                            </div>
-                            <div id="image-container-for-5"></div>
-                            <p id="temp-for-5"></p>
-                            <p id="wind-for-5"></p>
-                            <p id="humidity-for-5"></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-2 gy-3">
-                        <div class="card">
-                            <div class="card-header" id="date-for-13">
-                                
-                            </div>
-                            <div id="image-container-for-13"></div>
-                            <p id="temp-for-13"></p>
-                            <p id="wind-for-13"></p>
-                            <p id="humidity-for-13"></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-2 gy-3">
-                        <div class="card">
-                            <div class="card-header" id="date-for-21">
-                                
-                            </div>
-                            <div id="image-container-for-21"></div>
-                            <p id="temp-for-21"></p>
-                            <p id="wind-for-21"></p>
-                            <p id="humidity-for-21"></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-2 gy-3">
-                        <div class="card">
-                            <div class="card-header" id="date-for-29">
-                                
-                            </div>
-                            <div id="image-container-for-29"></div>
-                            <p id="temp-for-29"></p>
-                            <p id="wind-for-29"></p>
-                            <p id="humidity-for-29"></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-2 gy-3">
-                        <div class="card">
-                            <div class="card-header" id="date-for-37">
-                                
-                            </div>
-                            <div id="image-container-for-37"></div>
-                            <p id="temp-for-37"></p>
-                            <p id="wind-for-37"></p>
-                            <p id="humidity-for-37"></p>
-                        </div>
-                    </div>
+            <!--forecast data start-->
+            <section id="forecast">
+                <div class="container">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-12 col-md-6 col-lg-2 gy-3">
+                            <div class="card">
+                                <div class="card-header" id="date-for-5">
 
+                                </div>
+                                <div id="image-container-for-5"></div>
+                                <p id="temp-for-5"></p>
+                                <p id="wind-for-5"></p>
+                                <p id="humidity-for-5"></p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-2 gy-3">
+                            <div class="card">
+                                <div class="card-header" id="date-for-13">
+
+                                </div>
+                                <div id="image-container-for-13"></div>
+                                <p id="temp-for-13"></p>
+                                <p id="wind-for-13"></p>
+                                <p id="humidity-for-13"></p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-2 gy-3">
+                            <div class="card">
+                                <div class="card-header" id="date-for-21">
+
+                                </div>
+                                <div id="image-container-for-21"></div>
+                                <p id="temp-for-21"></p>
+                                <p id="wind-for-21"></p>
+                                <p id="humidity-for-21"></p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-2 gy-3">
+                            <div class="card">
+                                <div class="card-header" id="date-for-29">
+
+                                </div>
+                                <div id="image-container-for-29"></div>
+                                <p id="temp-for-29"></p>
+                                <p id="wind-for-29"></p>
+                                <p id="humidity-for-29"></p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-2 gy-3">
+                            <div class="card">
+                                <div class="card-header" id="date-for-37">
+
+                                </div>
+                                <div id="image-container-for-37"></div>
+                                <p id="temp-for-37"></p>
+                                <p id="wind-for-37"></p>
+                                <p id="humidity-for-37"></p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!--forecast data end-->
+            </section>
+            <!--forecast data end-->
+        </div>
 
-        <section id="history">
-            <h2 id="title">History</h2>
+        <section id="history" class="overflow-hidden">
+            <div id="title">
+                <h2>History</h2>
+                <button id="clear-btn">Clear Storage</button>
+            </div>
             <div class="container history-container">
                 <div class="row justify-content-center history-row">
                 </div>

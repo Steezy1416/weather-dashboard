@@ -3,6 +3,12 @@ var cityForm = $("#search-city-form")
 var cityInput = $("#city-input")
 var historyContainer = $(".history-container")
 var numberOfHistoryBoxes = -1
+var clearStorage = $("#clear-btn")
+
+var placeholder = $(".placeholder-form-container")
+placeholder.classList.add("hide")
+var mainInformation =$(".main-information")
+
 
 var getInfo = function (event) {
     event.preventDefault()
@@ -27,6 +33,7 @@ var getRepoData = function (cityName) {
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
+                
                 displayCurrentData(data)
                 
                 console.log(data)
@@ -43,6 +50,10 @@ var getRepoData = function (cityName) {
 }
 
 var displayCurrentData = function (data) {
+    
+    mainInformation.removeClass("hide")
+    
+
     var currentCity = $("#city-name")
     var currentDate = $("#current-date")
     var currentTemp = $("#current-temp")
@@ -123,6 +134,10 @@ $(historyContainer).on("click",".city-history", function(event) {
     var historyCity = event.target.innerText
     getRepoData(historyCity)
 })
+$(clearStorage).on("click", function(){
+    localStorage.clear()
+})
+
 
 for (var i = 0; i < localStorage.length; i++) {
     var storedCity = (localStorage.getItem(i))

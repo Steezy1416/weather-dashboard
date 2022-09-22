@@ -5,8 +5,8 @@
 }
 #container {
     background-color: black;
-    
 }
+
 
 header {
     width: 100%;
@@ -22,6 +22,16 @@ header {
     justify-content: center;
     align-items: center;
     color: white;
+
+}
+
+.placeholder-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 77vh;
 
 }
 
@@ -85,4 +95,11 @@ header {
     font-size: 30px;
 }
 
+.clear-btn {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
 
