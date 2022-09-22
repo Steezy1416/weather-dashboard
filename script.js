@@ -1,6 +1,8 @@
 var weatherKey = "e365a56e35842cef898de05f21dfc4b8"
 var cityForm = $("#search-city-form")
 var cityInput = $("#city-input")
+var historyContainer = $(".history-container")
+var numberOfHistoryBoxes = -1
 
 var getInfo = function (event) {
     event.preventDefault()
@@ -108,9 +110,21 @@ var cityHistory = function(city) {
     historyBoxName.textContent = city
     historyBox.append(historyBoxName)
     historyRow.append(historyBox)
-    
+    numberOfHistoryBoxes ++
+
+    localStorage.setItem(numberOfHistoryBoxes, city)
+
 
     
 }
 
 $(cityForm).on("submit", getInfo)
+$(historyContainer).on("click",".city-history", function(event) {
+    var historyCity = event.target.innerText
+    getRepoData(historyCity)
+})
+
+for (var i = 0; i < localStorage.length; i++) {
+    var storedCity = (localStorage.getItem(i))
+    cityHistory(storedCity)
+}
