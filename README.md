@@ -37,3 +37,4 @@ How can I see this Weather Dashboard?
 
 1. Look at the files in this [repository](https://github.com/Steezy1416/weather-dashboard).
 
+1. Go to the [weather-dashboard](https://steezy1416.github.io/weather-dashboard/) website.
