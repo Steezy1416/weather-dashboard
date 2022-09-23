@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container {
+    background-color: black;
+}
+
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+}
+
+.placeholder-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 78vh;
+    font-size: 20px;
+
+}
+input{
+    background-color: lightgray;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 5px;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: lightgrey;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+button:hover {
+    background-color: #F5F5F0;
+}
+
+#search-button {
+    display: block;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 50%;
+}
+
+#city-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    width: 85vw;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    border-radius: 35px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    
+}
+
+.card-header {
+    background-color: #333;
+    color: lightgray;
+    text-align: center;
+}
+.card-header:hover {
+    color: white;
+}
+.card {
+    background-color: lightgray;
+}
+.card:hover {
+    border: 3px solid white;
+    color: black;
+    background-color: #F5F5F0;
+}
+
+#history {
+    background-color: black;
+}
+
+#title {
+    color: white;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.history-box {
+    border: 2px solid lightgray;
+    border-radius: 25px;
+    background-color: #333;
+    color: lightgrey;
+    margin: 5px;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.history-box:hover {
+    border:3px solid white;
+    color: white;
+}
+
+.city-history {
+    margin: 0;
+    
+}
+
+.clear-btn {
+    display: block;
+    
+}
+
+.hide {
+    display: none;
+}
+
